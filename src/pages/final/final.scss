@@ -1,0 +1,44 @@
+.collage-photo {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Add a transition for a smoother fade-in effect */
+}
+
+/* Dynamically generate animation classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dynamically generate animation classes based on the number of photos */
+.collage-photo {
+  /* Use CSS Variables to dynamically adjust animation delay */
+  animation: fadeIn 0.5s ease-in-out var(--animation-delay) forwards;
+}
+
+/* Generate CSS Variables for animation delay */
+:root {
+  --animation-delay: 0s;
+}
+
+/* Adjust animation delay for each photo */
+.collage-photo:nth-child(1) {
+  --animation-delay: 0.5s;
+}
+
+.collage-photo:nth-child(2) {
+  --animation-delay: 1s;
+}
+
+.collage-photo:nth-child(3) {
+  --animation-delay: 1.5s;
+}
+
+/* Add more nth-child rules for additional images */
+/* ... */

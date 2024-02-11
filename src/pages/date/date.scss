@@ -1,0 +1,65 @@
+.date {
+  background-color: #faedcb;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  .neel-board {
+    width: 80vw;
+    height: 80vh;
+    background-color: #f4fafb;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: focus 3s linear;
+    overflow: hidden;
+
+    .button {
+      width: 180px;
+      height: 100px;
+      background-color: #f8d783;
+      color: #3d2d04;
+      font-size: 20px;
+    }
+
+    @keyframes focus {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #img1 {
+      margin-top: auto;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .text-overlay {
+      position: absolute;
+      z-index: 1;
+      top: 20vh;
+      left: 13vw;
+      font-size: 22px;
+    }
+
+    #img2 {
+      margin: 100px auto auto auto;
+      width: 500px;
+      height: fit-content;
+    }
+
+    #img3 {
+      margin-top: 0;
+      margin-bottom: auto;
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
